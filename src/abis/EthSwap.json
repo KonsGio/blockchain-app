@@ -2,6 +2,18 @@
   "contractName": "EthSwap",
   "abi": [
     {
+      "inputs": [
+        {
+          "internalType": "contract Token",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
       "constant": true,
       "inputs": [],
       "name": "name",
@@ -15,23 +27,38 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "contract Token",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/EthSwap.sol\":\"EthSwap\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/EthSwap.sol\":{\"keccak256\":\"0x882b5b81a85012daf25cac7674a6b666ecb901e0be421682f0467c764230ae87\",\"urls\":[\"bzz-raw://f5d11e6223ce3d32a55d268540894fdd48faba4fbadb9c92909fa5777881687e\",\"dweb:/ipfs/QmbvWXBuK6J2srZc7CLFX2rb5X82ke9fL2wBctdFQiQW4K\"]}},\"version\":1}",
-  "bytecode": "0x60806040526040518060400160405280601881526020017f4574685377617020496e7374616e742045786368616e676500000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b610186806101166000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a72315820f3ab0361f00f8f22be6545a8b43d3f66cfb307aff5038a8d90bdae028ebdebb864736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a72315820f3ab0361f00f8f22be6545a8b43d3f66cfb307aff5038a8d90bdae028ebdebb864736f6c63430005100032",
-  "sourceMap": "27:75:0:-;;;51:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;27:75;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:75:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "27:75:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:75:0;;;;;;;;;;;;;;;;;;;51:47;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;51:47:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract EthSwap {\r\n    string public name = \"EthSwap Instant Exchange\";\r\n}\r\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Token\",\"name\":\"_token\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract Token\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/EthSwap.sol\":\"EthSwap\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/EthSwap.sol\":{\"keccak256\":\"0x20f40b56d6be599301702462acd9b438791714c8e7d879edf1e51046d3d6623e\",\"urls\":[\"bzz-raw://e0877d187a26618ff2810f312e39493670f0433d9b8f917f723d412ab8fe1df9\",\"dweb:/ipfs/QmXrx7Ep4wfF2X6BMaUsktox6K9UypmWoTzXmtwMQNxdiz\"]},\"/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/Token.sol\":{\"keccak256\":\"0x64f747e0c86b1549d2282700cae030bb59a303216b3eb5cb23311e77931895c6\",\"urls\":[\"bzz-raw://3d87f3d09e51bf562d344765540a728c871ea20be303f5594382e6768e2c63ec\",\"dweb:/ipfs/QmYHGsmGLdevmyqkNMX9z1H7oyK7KG9ySC491aCk2UsAcC\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518060400160405280601881526020017f4574685377617020496e7374616e742045786368616e676500000000000000008152506000908051906020019061004f9291906100d7565b5034801561005c57600080fd5b5060405161038c38038061038c8339818101604052602081101561007f57600080fd5b810190808051906020019092919050505080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061017c565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061011857805160ff1916838001178555610146565b82800160010185558215610146579182015b8281111561014557825182559160200191906001019061012a565b5b5090506101539190610157565b5090565b61017991905b8082111561017557600081600090555060010161015d565b5090565b90565b6102018061018b6000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c806306fdde031461003b578063fc0c546a146100be575b600080fd5b610043610108565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610083578082015181840152602081019050610068565b50505050905090810190601f1680156100b05780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100c66101a6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561019e5780601f106101735761010080835404028352916020019161019e565b820191906000526020600020905b81548152906001019060200180831161018157829003601f168201915b505050505081565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a72315820623a74769fa18816ecba0b7c8081a2fbc294d21955a52743d1246eb25983f35d64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c806306fdde031461003b578063fc0c546a146100be575b600080fd5b610043610108565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610083578082015181840152602081019050610068565b50505050905090810190601f1680156100b05780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100c66101a6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561019e5780601f106101735761010080835404028352916020019161019e565b820191906000526020600020905b81548152906001019060200180831161018157829003601f168201915b505050505081565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a72315820623a74769fa18816ecba0b7c8081a2fbc294d21955a52743d1246eb25983f35d64736f6c63430005100032",
+  "sourceMap": "67:173:0:-;;;91:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;172:65;8:9:-1;5:2;;;30:1;27;20:12;5:2;172:65:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;172:65:0;;;;;;;;;;;;;;;;223:6;215:5;;:14;;;;;;;;;;;;;;;;;;172:65;67:173;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "67:173:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;67:173:0;;;;;;;;;;;;;;;;;;;;;;;;91:47;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;91:47:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;145:18;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;91:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;145:18::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\nimport \"./Token.sol\";\r\n//truffle compile\r\ncontract EthSwap {\r\n    string public name = \"EthSwap Instant Exchange\";\r\n    Token public token;\r\n\r\n    constructor(Token _token) public{\r\n        token = _token;\r\n    }\r\n}\r\n",
   "sourcePath": "C:\\Users\\KonstantinosG\\VueProjects\\blockchain-app\\src\\contracts\\EthSwap.sol",
   "ast": {
     "absolutePath": "/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/EthSwap.sol",
     "exportedSymbols": {
       "EthSwap": [
-        5
+        18
       ]
     },
-    "id": 6,
+    "id": 19,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -46,25 +73,36 @@
         "src": "0:23:0"
       },
       {
+        "absolutePath": "/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/Token.sol",
+        "file": "./Token.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 19,
+        "sourceUnit": 257,
+        "src": "25:21:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 5,
+        "id": 18,
         "linearizedBaseContracts": [
-          5
+          18
         ],
         "name": "EthSwap",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4,
+            "id": 5,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 5,
-            "src": "51:47:0",
+            "scope": 18,
+            "src": "91:47:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -72,10 +110,10 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 2,
+              "id": 3,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "51:6:0",
+              "src": "91:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -84,14 +122,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "4574685377617020496e7374616e742045786368616e6765",
-              "id": 3,
+              "id": 4,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "string",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "72:26:0",
+              "src": "112:26:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_0cd767832a4b45e13c98bb05545343ab53826a9ea9075205b12bb04a1062f40e",
@@ -100,22 +138,158 @@
               "value": "EthSwap Instant Exchange"
             },
             "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 18,
+            "src": "145:18:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Token_$256",
+              "typeString": "contract Token"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6,
+              "name": "Token",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 256,
+              "src": "145:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Token_$256",
+                "typeString": "contract Token"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 16,
+              "nodeType": "Block",
+              "src": "204:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 12,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "215:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$256",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 13,
+                      "name": "_token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "223:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$256",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "215:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$256",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 15,
+                  "nodeType": "ExpressionStatement",
+                  "src": "215:14:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 17,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 17,
+                  "src": "184:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$256",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 8,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 256,
+                    "src": "184:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$256",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "183:14:0"
+            },
+            "returnParameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "204:0:0"
+            },
+            "scope": 18,
+            "src": "172:65:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
           }
         ],
-        "scope": 6,
-        "src": "27:75:0"
+        "scope": 19,
+        "src": "67:173:0"
       }
     ],
-    "src": "0:104:0"
+    "src": "0:242:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/EthSwap.sol",
     "exportedSymbols": {
       "EthSwap": [
-        5
+        18
       ]
     },
-    "id": 6,
+    "id": 19,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -130,25 +304,36 @@
         "src": "0:23:0"
       },
       {
+        "absolutePath": "/C/Users/KonstantinosG/VueProjects/blockchain-app/src/contracts/Token.sol",
+        "file": "./Token.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 19,
+        "sourceUnit": 257,
+        "src": "25:21:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 5,
+        "id": 18,
         "linearizedBaseContracts": [
-          5
+          18
         ],
         "name": "EthSwap",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4,
+            "id": 5,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 5,
-            "src": "51:47:0",
+            "scope": 18,
+            "src": "91:47:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -156,10 +341,10 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 2,
+              "id": 3,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "51:6:0",
+              "src": "91:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -168,14 +353,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "4574685377617020496e7374616e742045786368616e6765",
-              "id": 3,
+              "id": 4,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "string",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "72:26:0",
+              "src": "112:26:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_0cd767832a4b45e13c98bb05545343ab53826a9ea9075205b12bb04a1062f40e",
@@ -184,13 +369,149 @@
               "value": "EthSwap Instant Exchange"
             },
             "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7,
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 18,
+            "src": "145:18:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Token_$256",
+              "typeString": "contract Token"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6,
+              "name": "Token",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 256,
+              "src": "145:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Token_$256",
+                "typeString": "contract Token"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 16,
+              "nodeType": "Block",
+              "src": "204:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 12,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "215:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$256",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 13,
+                      "name": "_token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "223:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Token_$256",
+                        "typeString": "contract Token"
+                      }
+                    },
+                    "src": "215:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$256",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "id": 15,
+                  "nodeType": "ExpressionStatement",
+                  "src": "215:14:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 17,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 17,
+                  "src": "184:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Token_$256",
+                    "typeString": "contract Token"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 8,
+                    "name": "Token",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 256,
+                    "src": "184:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Token_$256",
+                      "typeString": "contract Token"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "183:14:0"
+            },
+            "returnParameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "204:0:0"
+            },
+            "scope": 18,
+            "src": "172:65:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
           }
         ],
-        "scope": 6,
-        "src": "27:75:0"
+        "scope": 19,
+        "src": "67:173:0"
       }
     ],
-    "src": "0:104:0"
+    "src": "0:242:0"
   },
   "compiler": {
     "name": "solc",
@@ -200,12 +521,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x338D70D0a6a44772CbCd1Fc7289B15DC7c4b9cA2",
-      "transactionHash": "0x5111dc71d4bbb669a086f7f46fb2bf49242995e4a156d5ce133138bb0cd86318"
+      "address": "0x1d7cF0756b69b204D2ee24B1857aFA416565D0b4",
+      "transactionHash": "0xd03bd519ab8af13e0ad5c8c85a58d94a51361b13b1bb7a05240e9afdcbdd234d"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2021-12-08T14:16:10.490Z",
+  "updatedAt": "2021-12-08T23:38:06.214Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
