@@ -1,6 +1,6 @@
 require('babel-register');
 require('babel-polyfill');
-
+//connection to ganache
 module.exports = {
   networks: {
     development: {
